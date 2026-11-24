@@ -8,10 +8,10 @@ export const SITE = {
   // Dominio público (sin barra final). Lo comparten esta web y el admin, repartidos por el Worker de cloudflare-router/.
   url: "https://dentalcorsoftware.com.ar",
   locale: "es_AR",
-  // WhatsApp y teléfono tomados de los valores por defecto del admin. TODO: confirmar que sigan vigentes.
-  whatsappNumber: "5493517699950",
-  whatsappDisplay: "+54 9 351 769-9950",
-  phone: "+5493517699950",
+  // WhatsApp comercial (formato wa.me: 549 + número sin 0 ni 15) y cómo se muestra en pantalla.
+  whatsappNumber: "5493613873029",
+  whatsappDisplay: "+54 9 361 387-3029",
+  phone: "+5493613873029",
   // Casilla del dominio (es la que usan los SMTP del backend). TODO: confirmar que sea la de contacto comercial.
   email: "info@dentalcorsoftware.com.ar",
   address: "Córdoba, Argentina",
