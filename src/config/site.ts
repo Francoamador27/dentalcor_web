@@ -9,9 +9,9 @@ export const SITE = {
   url: "https://dentalcorsoftware.com.ar",
   locale: "es_AR",
   // WhatsApp comercial (formato wa.me: 549 + número sin 0 ni 15) y cómo se muestra en pantalla.
-  whatsappNumber: "5493613873029",
-  whatsappDisplay: "+54 9 361 387-3029",
-  phone: "+5493613873029",
+  whatsappNumber: "5493513873029",
+  whatsappDisplay: "+54 9 351 387-3029",
+  phone: "+5493513873029",
   // Casilla del dominio (es la que usan los SMTP del backend). TODO: confirmar que sea la de contacto comercial.
   email: "info@dentalcorsoftware.com.ar",
   address: "Córdoba, Argentina",
