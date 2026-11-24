@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  /* Misma identidad que el admin: Inter para texto, Comfortaa para títulos. */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-comfortaa), var(--font-inter), sans-serif;
+
+  /* Azul de marca (blue de Tailwind, como el admin) + acento celeste (cyan). */
+  --color-brand-50: #eff6ff;
+  --color-brand-100: #dbeafe;
+  --color-brand-200: #bfdbfe;
+  --color-brand-500: #3b82f6;
+  --color-brand-600: #2563eb;
+  --color-brand-700: #1d4ed8;
+  --color-brand-800: #1e40af;
+  --color-brand-900: #1e3a8a;
+
+  --color-ink: #0f172a;
+  --color-muted: #475569;
+  --color-line: #e2e8f0;
+
+  --animate-fade-up: fade-up 0.6s ease-out both;
+  --animate-fade-in: fade-in 0.2s ease-out both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(16px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+}
+
+/* Utilidades propias del sitio */
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+@utility section {
+  @apply py-16 md:py-24;
+}
+@utility section-title {
+  @apply text-3xl font-bold tracking-tight text-balance text-ink md:text-4xl;
+}
+@utility btn {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-center text-sm font-semibold transition-colors duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-600;
+}
+@utility bg-brand-gradient {
+  background-image: linear-gradient(to right, #2563eb, #0891b2);
+}
+@utility text-brand-gradient {
+  background-image: linear-gradient(to right, #2563eb, #06b6d4);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+@utility btn-primary {
+  @apply btn bg-brand-gradient text-white shadow-md shadow-brand-600/20 transition-all hover:shadow-lg hover:shadow-brand-600/30 hover:brightness-110;
+}
+@utility btn-whatsapp {
+  @apply btn bg-green-500 text-white shadow-md shadow-green-500/20 transition-all hover:bg-green-600;
+}
+@utility btn-secondary {
+  @apply btn bg-white text-ink ring-1 ring-line hover:bg-brand-50;
+}
+@utility btn-ghost {
+  @apply btn text-ink hover:bg-brand-50;
+}
+
+/* Fuera de capas para que siempre pise el padding base de .btn */
+.btn-lg {
+  padding: 0.875rem 1.5rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+/* Resaltado rotativo de turnos en el mockup del panel (4 ítems × 2 s). */
+@keyframes mockup-cycle {
+  0%,
+  24% {
+    background-color: #ffffff;
+    border-color: rgb(37 99 235 / 0.3);
+    box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+    transform: scale(1.01);
+  }
+  26%,
+  100% {
+    background-color: rgb(255 255 255 / 0.6);
+    border-color: transparent;
+    box-shadow: none;
+    transform: none;
+  }
+}
+.mockup-cycle {
+  animation: mockup-cycle 8s ease-in-out infinite;
+}
+
+/* Aparición suave al hacer scroll (solo CSS, en navegadores que lo soportan). */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .reveal {
+      animation: fade-up linear both;
+      animation-timeline: view();
+      animation-range: entry 0% entry 40%;
+    }
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

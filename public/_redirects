@@ -1,0 +1,6 @@
+# Cloudflare Pages lee este archivo automáticamente. Gana la primera regla que coincide.
+# URLs viejas de la web pública (antes las servía el admin) -> páginas nuevas.
+# El Worker (cloudflare-router/) manda estas rutas a este proyecto.
+/servicios          /funciones  301
+/servicios/*        /funciones  301
+/ejemplos           /           301

@@ -1,0 +1,21 @@
+# Worker que reparte dentalcorsoftware.com.ar entre la web comercial y el admin.
+# Deploy: dentro de esta carpeta, `npx wrangler deploy`. Ver DEPLOY.md.
+name = "dentalcor-router"
+main = "worker.js"
+compatibility_date = "2026-11-01"
+
+# URL de prueba: https://dentalcor-router.<tu-cuenta>.workers.dev
+workers_dev = true
+
+[vars]
+# Proyecto de Pages de la web comercial.
+WEB_ORIGIN = "https://dentalcor-web.pages.dev"
+# TODO: poné el dominio *.pages.dev del proyecto del admin
+# (Cloudflare → Workers & Pages → proyecto del admin → arriba a la derecha figura "xxxx.pages.dev").
+ADMIN_ORIGIN = "https://CAMBIAR-POR-EL-ADMIN.pages.dev"
+
+# Paso 5 de DEPLOY.md (el corte): descomentá estas líneas y volvé a correr `npx wrangler deploy`.
+# routes = [
+#   { pattern = "dentalcorsoftware.com.ar", custom_domain = true },
+#   { pattern = "www.dentalcorsoftware.com.ar", custom_domain = true },
+# ]
