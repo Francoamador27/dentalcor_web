@@ -37,6 +37,11 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary_large_image", images: [OG_IMAGE.url] },
   robots: { index: true, follow: true },
+  // App instalable (PWA): el manifest lo sirve el admin (vía el Worker) y su
+  // start_url es /admin-dash. Así, aunque alguien agregue DentalCor a la
+  // pantalla de inicio desde esta portada, el ícono abre la app y no la web.
+  manifest: "/manifest.webmanifest",
+  appleWebApp: { capable: true, title: "DentalCor", statusBarStyle: "default" },
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -66,6 +71,17 @@ const softwareJsonLd = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="es-AR" className={`${inter.variable} ${comfortaa.variable} h-full antialiased`}>
+      <head>
+        {/* Si la web se abre como app instalada (ícono en la pantalla de inicio),
+            ir directo al panel: un ícono agregado desde esta portada abría la
+            web comercial en vez de la app. Corre antes de pintar la página. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){location.replace('/admin-dash')}}catch(e){}",
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col font-sans">
         <JsonLd data={softwareJsonLd} />
         <Header />
