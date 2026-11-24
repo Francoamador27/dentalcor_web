@@ -18,8 +18,8 @@ export const SITE = {
   businessHours: "Lunes a Viernes, 9 a 18 hs",
   // Login del admin, en el mismo dominio (el Worker lo manda al proyecto del admin). Usar <a>, no <Link>.
   loginUrl: "/auth/login",
-  signupUrl: "/auth/login",
-  trialDays: 30,
+  signupUrl: "/auth/registro",
+  trialDays: 15,
 } as const;
 
 export const NAV_LINKS = [

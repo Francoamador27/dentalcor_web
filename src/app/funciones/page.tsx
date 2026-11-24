@@ -13,7 +13,7 @@ export const metadata: Metadata = pageMetadata({ ...FEATURES_PAGE.seo, path: "/f
 export default function FuncionesPage() {
   return (
     <>
-      <Hero title={FEATURES_PAGE.title} subtitle={FEATURES_PAGE.subtitle} primaryCta="Probar 30 días gratis" />
+      <Hero title={FEATURES_PAGE.title} subtitle={FEATURES_PAGE.subtitle} primaryCta="Probar 15 días gratis" />
 
       <section className="section pt-4 md:pt-8" aria-labelledby="main-title">
         <div className="container-page">

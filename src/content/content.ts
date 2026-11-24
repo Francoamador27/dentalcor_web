@@ -79,10 +79,10 @@ export const HOME = {
       { icon: "building", label: "Multi-sede" },
       { icon: "mail", label: "Emails Automáticos" },
     ] satisfies { icon: IconName; label: string }[],
-    offerTitle: "30 días GRATIS",
+    offerTitle: "15 días GRATIS",
     offerBadge: "🔥 OFERTA",
     offerText: "Sin contrato · Sin tarjeta de crédito · Setup incluido",
-    primaryCta: "Probar 30 días gratis",
+    primaryCta: "Probar 15 días gratis",
     whatsappCta: "Empezar por WhatsApp",
     whatsappMessage: "Hola, quiero empezar con DentalCor gratis. ¿Me podés ayudar?",
     // TODO: "Soporte 24/7" y "4.9 — +500 clínicas" vienen de producción; confirmar que sean verificables.
@@ -125,7 +125,7 @@ export const HOME = {
       "Desde la agenda hasta las finanzas. DentalCor centraliza la gestión de tu consultorio para que vos te concentres en lo que importa: atender pacientes.",
     includedLabel: "Funcionalidades incluidas",
     ctaTitle: "¿Querés ver cómo funciona en tu clínica?",
-    ctaText: "30 días gratis · Sin tarjeta · Setup incluido",
+    ctaText: "15 días gratis · Sin tarjeta · Setup incluido",
     ctaButton: "Empezar prueba gratuita",
   },
 
@@ -241,8 +241,8 @@ export const HOME = {
   cta: {
     badge: "Oferta por tiempo limitado",
     title: "Empezá a optimizar tu clínica hoy",
-    subtitle: "30 días completamente gratis. Sin tarjeta de crédito. Sin compromiso.",
-    button: "Comenzar mis 30 días gratis",
+    subtitle: "15 días completamente gratis. Sin tarjeta de crédito. Sin compromiso.",
+    button: "Comenzar mis 15 días gratis",
     checks: ["Setup incluido", "Capacitación gratis", "Sin contrato"],
     whatsappLabel: "¿Preguntas? Contactanos por WhatsApp:",
     whatsappMessage: "Hola, quiero saber más sobre su software odontológico",
@@ -582,9 +582,9 @@ export const FEATURES: Feature[] = [
 
 export const FAQS: Faq[] = [
   {
-    question: "¿Cómo funciona la prueba de 30 días?",
+    question: "¿Cómo funciona la prueba de 15 días?",
     answer:
-      "Creás tu cuenta y usás DentalCor completo durante 30 días, sin cargar tarjeta. Al terminar, si querés seguir, te contactamos para contarte cómo continuar.",
+      "Creás tu cuenta y usás DentalCor completo durante 15 días, sin cargar tarjeta. Al terminar, si querés seguir, te contactamos para contarte cómo continuar.",
   },
   {
     question: "¿Tengo que instalar algo?",
