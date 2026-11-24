@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import { SITE } from "@/config/site";
-import { HOME, PLANS } from "@/content/content";
+import { HOME } from "@/content/content";
 import { OG_IMAGE } from "@/lib/seo";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -50,8 +50,6 @@ export const viewport: Viewport = {
   themeColor: "#2563eb",
 };
 
-const prices = PLANS.map((p) => p.founderPrice);
-
 const softwareJsonLd = {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -63,13 +61,6 @@ const softwareJsonLd = {
   inLanguage: "es-AR",
   description: HOME.seo.description,
   areaServed: { "@type": "Country", name: "Argentina" },
-  offers: {
-    "@type": "AggregateOffer",
-    priceCurrency: "ARS",
-    lowPrice: Math.min(...prices),
-    highPrice: Math.max(...prices),
-    offerCount: PLANS.length,
-  },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

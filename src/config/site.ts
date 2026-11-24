@@ -26,10 +26,9 @@ export const NAV_LINKS = [
   { href: "/", label: "Inicio" },
   { href: "/funciones", label: "Funcionalidades" },
   { href: "/paginas-web", label: "Páginas Web" },
-  { href: "/precios", label: "Precios" },
   { href: "/quienes-somos", label: "Quiénes Somos" },
   { href: "/contacto", label: "Contacto" },
 ] as const;
 
 /** Rutas de este sitio (sitemap). Si agregás una página, sumala también en cloudflare-router/worker.js. */
-export const ROUTES = ["/", "/funciones", "/paginas-web", "/precios", "/quienes-somos", "/contacto"] as const;
+export const ROUTES = ["/", "/funciones", "/paginas-web", "/quienes-somos", "/contacto"] as const;

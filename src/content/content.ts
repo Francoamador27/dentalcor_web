@@ -24,15 +24,6 @@ export type Module = {
   features: string[];
 };
 
-export type Plan = {
-  name: string;
-  description: string;
-  price: number;
-  founderPrice: number;
-  highlighted?: boolean;
-  features: string[];
-};
-
 export type Faq = { question: string; answer: string };
 
 /* ------------------------------------------------------------------ */
@@ -586,74 +577,6 @@ export const FEATURES: Feature[] = [
 ];
 
 /* ------------------------------------------------------------------ */
-/* Precios                                                             */
-/* ------------------------------------------------------------------ */
-
-export const PRICING_PAGE = {
-  seo: {
-    title: "Precios",
-    description:
-      "Planes mensuales por clínica en pesos. Precio fundador para los primeros consultorios y 30 días gratis para probar DentalCor.",
-  },
-  title: "Precios simples, en pesos y por clínica",
-  subtitle: "Elegí el plan según el tamaño de tu equipo. Todos incluyen 30 días gratis.",
-  // TODO: definir condiciones reales del precio fundador.
-  founder: {
-    badge: "Precio fundador",
-    text: "Las primeras clínicas que se suman mantienen el precio fundador mientras sigan activas.",
-  },
-  perMonth: "/ mes por clínica",
-  regularPrice: "Precio regular",
-  cta: "Probar 30 días gratis",
-  // TODO: confirmar si los precios incluyen IVA.
-  footnote: "Valores en pesos argentinos. Precios de referencia sujetos a actualización.",
-};
-
-// TODO: valores placeholder. Definir precios y límites reales de cada plan.
-export const PLANS: Plan[] = [
-  {
-    name: "Consultorio",
-    description: "Para profesionales que atienden solos.",
-    price: 18000,
-    founderPrice: 15000,
-    features: [
-      "1 profesional",
-      "Agenda y pacientes ilimitados",
-      "Historia clínica y odontograma",
-      "Envío de turnos por WhatsApp",
-      "Soporte por WhatsApp",
-    ],
-  },
-  {
-    name: "Clínica",
-    description: "Para equipos con varios profesionales y recepción.",
-    price: 22000,
-    founderPrice: 19000,
-    highlighted: true,
-    features: [
-      "Hasta 5 profesionales",
-      "Todo lo del plan Consultorio",
-      "Roles de odontólogo y admin",
-      "Presupuestos y finanzas",
-      "Soporte prioritario",
-    ],
-  },
-  {
-    name: "Multi-clínica",
-    description: "Para clínicas con más de una sede.",
-    price: 25000,
-    founderPrice: 22000,
-    features: [
-      "Profesionales ilimitados",
-      "Todo lo del plan Clínica",
-      "Varias sedes en una cuenta",
-      "Configuración por sede",
-      "Acompañamiento en la puesta en marcha",
-    ],
-  },
-];
-
-/* ------------------------------------------------------------------ */
 /* Preguntas frecuentes                                                */
 /* ------------------------------------------------------------------ */
 
@@ -661,7 +584,7 @@ export const FAQS: Faq[] = [
   {
     question: "¿Cómo funciona la prueba de 30 días?",
     answer:
-      "Creás tu cuenta y usás DentalCor completo durante 30 días, sin cargar tarjeta. Al terminar, elegís un plan si querés seguir.",
+      "Creás tu cuenta y usás DentalCor completo durante 30 días, sin cargar tarjeta. Al terminar, si querés seguir, te contactamos para contarte cómo continuar.",
   },
   {
     question: "¿Tengo que instalar algo?",
@@ -675,7 +598,7 @@ export const FAQS: Faq[] = [
   {
     question: "¿Sirve para un consultorio con un solo profesional?",
     answer:
-      "Sí. El plan Consultorio está pensado para quienes atienden solos, y podés pasarte a otro plan cuando sumes profesionales.",
+      "Sí. DentalCor sirve tanto para quienes atienden solos como para clínicas con varios profesionales, y podés sumar profesionales cuando lo necesites.",
   },
   {
     question: "¿Los datos de mis pacientes están seguros?",

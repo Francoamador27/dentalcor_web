@@ -9,7 +9,11 @@
  * Si agregás una página a la web comercial, sumala en WEB_PAGES.
  */
 
-/** Páginas de la web comercial (primer segmento de la URL). */
+/**
+ * Páginas de la web comercial (primer segmento de la URL).
+ * "precios" ya no existe en la web, pero se deja acá para que responda 404 desde la web
+ * (si fuera al admin, mostraría su página vieja de precios).
+ */
 const WEB_PAGES = new Set(["funciones", "paginas-web", "precios", "quienes-somos", "contacto"]);
 
 /** Archivos sueltos de la web comercial. */
@@ -24,13 +28,21 @@ const WEB_FILES = new Set([
   "/apple-touch-icon.png",
   "/android-chrome-192x192.png",
   "/android-chrome-512x512.png",
+  // Archivos para buscadores y agentes de IA. Si no existen en la web, la web responde 404
+  // (si fueran al admin, la SPA devolvería su HTML con 200 y se verían como archivos inválidos).
+  "/llms.txt",
+  "/llms-full.txt",
+  "/ai-catalog.json",
+  "/ai.txt",
+  "/humans.txt",
+  "/security.txt",
   // URLs viejas: la web comercial las redirige (public/_redirects).
   "/servicios",
   "/ejemplos",
 ]);
 
 /** Carpetas de la web comercial. */
-const WEB_PREFIXES = ["/_next/", "/brand/", "/servicios/", "/__next."];
+const WEB_PREFIXES = ["/_next/", "/brand/", "/servicios/", "/__next.", "/.well-known/"];
 
 /** Dominios públicos válidos (para el encabezado que lee la Function /c/:slug del admin). */
 const PUBLIC_HOSTS = new Set(["dentalcorsoftware.com.ar", "www.dentalcorsoftware.com.ar"]);

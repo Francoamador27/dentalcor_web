@@ -10,7 +10,6 @@ El admin (React, Cloudflare Pages) es un proyecto aparte: este repo **no** tiene
 | `/`              | `src/app/page.tsx`                 |
 | `/funciones`     | `src/app/funciones/page.tsx`       |
 | `/paginas-web`   | `src/app/paginas-web/page.tsx`     |
-| `/precios`       | `src/app/precios/page.tsx`         |
 | `/quienes-somos` | `src/app/quienes-somos/page.tsx`   |
 | `/contacto`      | `src/app/contacto/page.tsx`        |
 
@@ -21,11 +20,11 @@ También se generan `sitemap.xml` (`src/app/sitemap.ts`) y `robots.txt` (`src/ap
 
 ## Dónde editar
 
-- **Textos**: `src/content/content.ts` (home, funciones, planes y precios, FAQ, contacto, footer).
+- **Textos**: `src/content/content.ts` (home, funciones, páginas web, quiénes somos, FAQ, contacto, footer).
 - **Dominio, WhatsApp, email y links al admin**: `src/config/site.ts`.
 - **Imagen para redes (Open Graph)**: `public/og.png` (1200×630).
 - **Colores y estilos base**: `src/app/globals.css` (`@theme`).
-- **Componentes**: `src/components/` (Header, Footer, Hero, FeatureCard, PricingCard, FAQ, CTA, CostCalculator, ContactForm, Testimonials).
+- **Componentes**: `src/components/` (Header, Footer, Hero, FeatureCard, FAQ, CTA, CostCalculator, ContactForm, Testimonials).
 
 Buscá `TODO` en el proyecto para ver los placeholders y las funciones a confirmar.
 
@@ -53,7 +52,7 @@ npx serve out    # (opcional) previsualizar el build estático
    - Variable de entorno: `NODE_VERSION` = `20` (o superior)
 4. Guardá y deployá. Cada push a la rama principal publica una versión nueva.
 
-Cloudflare Pages sirve `precios.html` en `/precios` automáticamente (por eso `trailingSlash: false`).
+Cloudflare Pages sirve `funciones.html` en `/funciones` automáticamente (por eso `trailingSlash: false`).
 
 ### Links "Ingresar" y "Probar gratis"
 

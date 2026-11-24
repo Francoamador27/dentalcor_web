@@ -6,7 +6,7 @@ Todo sigue en **un solo dominio**, `dentalcorsoftware.com.ar`. Un **Worker** de 
 
 | Ruta | Va a | Proyecto |
 | --- | --- | --- |
-| `/`, `/funciones`, `/paginas-web`, `/precios`, `/quienes-somos`, `/contacto` (+ sus archivos) | Web comercial | **dentalcor-web** (Pages, nuevo) |
+| `/`, `/funciones`, `/paginas-web`, `/quienes-somos`, `/contacto` (+ sus archivos) | Web comercial | **dentalcor-web** (Pages, nuevo) |
 | Todo lo demás: `/auth/login`, `/admin-dash`, `/superadmin-dash`, `/mi-cuenta`, `/select-tenant`, `/c/:slug`, `/editor-web`… | Admin | **el proyecto del admin** (Pages, el que ya tenés) |
 
 Para tus clientes **no cambia nada**: entran por `dentalcorsoftware.com.ar/auth/login`, caen en `/admin-dash` o `/superadmin-dash` como siempre, no se tienen que volver a loguear y los links de las landings `/c/:slug` siguen iguales.
@@ -94,7 +94,7 @@ Después anotá el dominio `*.pages.dev` del admin: Cloudflare → **Workers & P
 
 ### Probalo en esa URL
 
-- [ ] `/`, `/funciones`, `/precios`, `/paginas-web`, `/quienes-somos`, `/contacto` muestran la **web nueva**.
+- [ ] `/`, `/funciones`, `/paginas-web`, `/quienes-somos`, `/contacto` muestran la **web nueva**.
 - [ ] Navegar entre esas páginas con el menú funciona sin errores.
 - [ ] `/auth/login` muestra la **pantalla de login del admin**.
 - [ ] `/c/ALGUNA-CLINICA` carga la landing de la clínica (la estructura; ver nota).
