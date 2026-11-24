@@ -10,9 +10,8 @@ workers_dev = true
 [vars]
 # Proyecto de Pages de la web comercial.
 WEB_ORIGIN = "https://dentalcor-web.pages.dev"
-# TODO: poné el dominio *.pages.dev del proyecto del admin
-# (Cloudflare → Workers & Pages → proyecto del admin → arriba a la derecha figura "xxxx.pages.dev").
-ADMIN_ORIGIN = "https://CAMBIAR-POR-EL-ADMIN.pages.dev"
+# Proyecto de Pages del admin.
+ADMIN_ORIGIN = "https://dentalcorsoftware.pages.dev"
 
 # Paso 5 de DEPLOY.md (el corte): descomentá estas líneas y volvé a correr `npx wrangler deploy`.
 # routes = [
