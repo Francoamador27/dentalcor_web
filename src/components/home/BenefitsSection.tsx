@@ -31,7 +31,7 @@ export default function BenefitsSection() {
           {t.items.map((item) => (
             <figure key={item.name} className="reveal rounded-2xl border border-white/20 bg-white/10 p-6 backdrop-blur-lg transition-colors hover:bg-white/15">
               <div className="mb-4 flex items-center justify-between gap-2">
-                <span className="flex gap-1" aria-label="5 de 5 estrellas">
+                <span className="flex gap-1" role="img" aria-label="5 de 5 estrellas">
                   {Array.from({ length: 5 }).map((_, i) => (
                     <Icon key={i} name="star" className="h-5 w-5 fill-yellow-400 text-yellow-400" />
                   ))}

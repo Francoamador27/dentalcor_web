@@ -6,7 +6,7 @@ import { SITE } from "@/config/site";
 export default function Logo({ variant = "color" }: { variant?: "color" | "blanco" }) {
   const white = variant === "blanco";
   return (
-    <Link href="/" className="group flex items-center gap-2.5" aria-label={`${SITE.name}, inicio`}>
+    <Link href="/" className="group flex items-center gap-2.5" title={`${SITE.name} — Inicio`}>
       <Image
         src={white ? "/brand/logo-icon-blanco.png" : "/brand/logo-icon.png"}
         alt=""

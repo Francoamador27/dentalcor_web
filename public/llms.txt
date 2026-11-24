@@ -1,0 +1,17 @@
+# DentalCor Software
+
+> Software de gestión en la nube para consultorios y clínicas odontológicas en Argentina: agenda por profesional, gestión de pacientes, historia clínica con odontograma, presupuestos en PDF, finanzas y notificaciones automáticas por email y WhatsApp. Se usa desde el navegador, sin instalar nada, y tiene 30 días de prueba gratis.
+
+DentalCor es un producto argentino (Córdoba). Los profesionales y administradores ingresan al sistema en https://dentalcorsoftware.com.ar/auth/login. Contacto comercial por WhatsApp al +54 9 351 387-3029 o por email a info@dentalcorsoftware.com.ar.
+
+## Páginas principales
+
+- [Inicio](https://dentalcorsoftware.com.ar/): qué es DentalCor, beneficios, módulos, calculadora del costo de un paciente que falta y preguntas frecuentes.
+- [Funcionalidades](https://dentalcorsoftware.com.ar/funciones): detalle de cada módulo (agenda y calendario, pacientes, historial clínico digital, profesionales, presupuestos, finanzas, comunicaciones automáticas, exportación y reportes).
+- [Páginas web para consultorios](https://dentalcorsoftware.com.ar/paginas-web): diseño web, posicionamiento en Google, Google Maps y campañas Performance Max para clínicas odontológicas.
+- [Quiénes somos](https://dentalcorsoftware.com.ar/quienes-somos): la empresa, su misión, servicios y datos de contacto.
+- [Contacto](https://dentalcorsoftware.com.ar/contacto): WhatsApp, email, dirección y horario de atención.
+
+## Optional
+
+- [Mapa del sitio](https://dentalcorsoftware.com.ar/sitemap.xml)

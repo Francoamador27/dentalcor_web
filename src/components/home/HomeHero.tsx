@@ -44,7 +44,7 @@ export default function HomeHero() {
           </div>
 
           <div>
-            <p className="mb-3 text-xs font-bold tracking-widest text-slate-400 uppercase">{h.pillsTitle}</p>
+            <p className="mb-3 text-xs font-bold tracking-widest text-slate-500 uppercase">{h.pillsTitle}</p>
             <ul className="flex flex-wrap gap-2">
               {h.pills.map((p) => (
                 <li

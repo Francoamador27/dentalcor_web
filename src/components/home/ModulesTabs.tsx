@@ -48,7 +48,8 @@ export default function ModulesTabs() {
                   <span className={`grid h-8 w-8 shrink-0 place-items-center rounded-lg ${isActive ? "bg-white/20 text-white" : `${t.bg} ${t.text}`}`}>
                     <Icon name={mod.icon} className="h-4 w-4" />
                   </span>
-                  <span className="hidden sm:inline">{mod.title}</span>
+                  {/* En el celular el texto no se ve, pero el lector de pantalla lo sigue leyendo. */}
+                  <span className="sr-only sm:not-sr-only">{mod.title}</span>
                   {isActive && <Icon name="chevron" className="ml-auto hidden h-4 w-4 lg:block" />}
                 </button>
               );
@@ -76,7 +77,7 @@ export default function ModulesTabs() {
                 <p className="leading-relaxed text-white/90">{active.description}</p>
               </div>
               <div className="bg-white p-6 md:p-8">
-                <h4 className="mb-4 text-xs font-bold tracking-widest text-slate-400 uppercase">{m.includedLabel}</h4>
+                <h4 className="mb-4 text-xs font-bold tracking-widest text-slate-500 uppercase">{m.includedLabel}</h4>
                 <div className="grid gap-3 sm:grid-cols-2">
                   {active.features.map((f) => (
                     <div key={f} className={`flex items-start gap-3 rounded-xl border p-3 ${tone.bg} ${tone.border}`}>
@@ -97,7 +98,7 @@ export default function ModulesTabs() {
               >
                 ← Anterior
               </button>
-              <span className="text-xs text-slate-400">
+              <span className="text-xs text-slate-500">
                 {index + 1} / {MODULES.length} módulos
               </span>
               <button
