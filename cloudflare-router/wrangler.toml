@@ -13,8 +13,8 @@ WEB_ORIGIN = "https://dentalcor-web.pages.dev"
 # Proyecto de Pages del admin.
 ADMIN_ORIGIN = "https://dentalcorsoftware.pages.dev"
 
-# Paso 5 de DEPLOY.md (el corte): descomentá estas líneas y volvé a correr `npx wrangler deploy`.
-# routes = [
-#   { pattern = "dentalcorsoftware.com.ar", custom_domain = true },
-#   { pattern = "www.dentalcorsoftware.com.ar", custom_domain = true },
-# ]
+# Dominio público atendido por este Worker (paso 5 de DEPLOY.md: el corte).
+routes = [
+  { pattern = "dentalcorsoftware.com.ar", custom_domain = true },
+  { pattern = "www.dentalcorsoftware.com.ar", custom_domain = true },
+]
