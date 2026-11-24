@@ -44,6 +44,17 @@ const WEB_FILES = new Set([
 /** Carpetas de la web comercial. */
 const WEB_PREFIXES = ["/_next/", "/brand/", "/servicios/", "/__next.", "/.well-known/"];
 
+/**
+ * Rutas dadas de baja: el Worker responde 404 directo (con la página 404 de la web),
+ * sin pasar por la caché de Pages, que puede seguir sirviendo la versión vieja varios días.
+ */
+const GONE_PAGES = new Set(["precios"]);
+
+export function isGonePath(pathname) {
+  const firstSegment = (pathname.split("/")[1] || "").replace(/\.(html|txt)$/, "");
+  return GONE_PAGES.has(firstSegment);
+}
+
 /** Dominios públicos válidos (para el encabezado que lee la Function /c/:slug del admin). */
 const PUBLIC_HOSTS = new Set(["dentalcorsoftware.com.ar", "www.dentalcorsoftware.com.ar"]);
 
@@ -58,6 +69,19 @@ export function isWebPath(pathname) {
 const router = {
   async fetch(request, env) {
     const url = new URL(request.url);
+
+    if (isGonePath(url.pathname)) {
+      const page = await fetch(new URL("/404.html", env.WEB_ORIGIN));
+      return new Response(page.ok ? page.body : "Página no encontrada", {
+        status: 404,
+        headers: {
+          "Content-Type": "text/html; charset=utf-8",
+          "Cache-Control": "no-store",
+          "X-Robots-Tag": "noindex",
+        },
+      });
+    }
+
     const origin = isWebPath(url.pathname) ? env.WEB_ORIGIN : env.ADMIN_ORIGIN;
     const target = new URL(url.pathname + url.search, origin);
 
