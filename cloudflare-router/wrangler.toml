@@ -7,14 +7,15 @@ compatibility_date = "2026-11-01"
 # URL de prueba: https://dentalcor-router.<tu-cuenta>.workers.dev
 workers_dev = true
 
+# Dominio público atendido por este Worker.
+# Tiene que ir ANTES de [vars]: en TOML todo lo que está debajo de [vars] pasa a ser una variable.
+routes = [
+  { pattern = "dentalcorsoftware.com.ar", custom_domain = true },
+  { pattern = "www.dentalcorsoftware.com.ar", custom_domain = true },
+]
+
 [vars]
 # Proyecto de Pages de la web comercial.
 WEB_ORIGIN = "https://dentalcor-web.pages.dev"
 # Proyecto de Pages del admin.
 ADMIN_ORIGIN = "https://dentalcorsoftware.pages.dev"
-
-# Dominio público atendido por este Worker (paso 5 de DEPLOY.md: el corte).
-routes = [
-  { pattern = "dentalcorsoftware.com.ar", custom_domain = true },
-  { pattern = "www.dentalcorsoftware.com.ar", custom_domain = true },
-]
