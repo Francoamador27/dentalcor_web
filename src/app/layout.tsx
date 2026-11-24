@@ -78,7 +78,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <script
           dangerouslySetInnerHTML={{
             __html:
-              "try{if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){location.replace('/admin-dash')}}catch(e){}",
+              // Freno anti-bucle: como mucho una redirección cada 15 s por sesión.
+              "try{if(window.matchMedia('(display-mode: standalone)').matches||window.navigator.standalone===true){var k='dc_pwa_redirect',t=Number(sessionStorage.getItem(k)||0);if(Date.now()-t>15000){sessionStorage.setItem(k,String(Date.now()));location.replace('/admin-dash')}}}catch(e){}",
           }}
         />
       </head>
